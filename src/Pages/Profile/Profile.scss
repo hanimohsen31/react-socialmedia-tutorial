@@ -1,0 +1,118 @@
+.Profile {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    margin-top: 60px;
+    .left {
+        flex: 2;
+    }
+    .right {
+        flex: 8;
+        .topProfile {
+            position: relative;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            margin-bottom: 250px;
+            .userCover {
+                width: 100%;
+                height: 25vh;
+                object-fit: cover;
+            }
+            .userData {
+                position: absolute;
+                // left: 50%;
+                top: 50%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                .whiteCircle {
+                    width: 250px;
+                    height: 250px;
+                    border-radius: 50%;
+                    background-color: white;
+                    img {
+                        width: 250px;
+                        height: 250px;
+                        border-radius: 50%;
+                        padding: 3px;
+                        object-fit: cover;
+                    }
+                }
+                .name {
+                    font-weight: 600;
+                    font-size: 30px;
+                    margin: 15px auto 0;
+                }
+                .bio {
+                    font-size: 22px;
+                    font-weight: 300;
+                    color: gray;
+                }
+            }
+        }
+        .buttom {
+            display: flex;
+            // justify-content: center;
+            // align-items: center;
+            .left {
+                flex: 5;
+            }
+            .rightInfo {
+                flex: 3;
+                margin: 10px;
+                padding: 15px;
+                .part1info {
+                    margin-bottom: 25px;
+                    h5 {
+                        font-weight: 600;
+                        font-size: 23px;
+                        margin-bottom: 10px;
+                    }
+                    p {
+                        opacity: 0.9;
+                        font-size: 18px;
+                        span {
+                            font-weight: 600;
+                        }
+                    }
+                }
+                .part2info {
+                    h5 {
+                        font-weight: 600;
+                        font-size: 23px;
+                        margin-bottom: 10px;
+                    }
+                    .friends {
+                        display: flex;
+                        // flex-direction: column;
+                        flex-wrap: wrap;
+                        justify-content: space-between;
+                        align-items: space-between;
+                        .friend {
+                            display: flex;
+                            justify-content: center;
+                            align-items: flex-start;
+                            flex-direction: column;
+                            text-align: center;
+                            img {
+                                width: 150px;
+                                height: 150px;
+                                object-fit: cover;
+                                border-radius: 5px;
+                                margin-bottom: 5px;
+                            }
+                            h6 {
+                                font-size: 16px;
+                                font-weight: 300px;
+                                color: gray;
+                                text-align: center;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

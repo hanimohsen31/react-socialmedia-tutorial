@@ -1,0 +1,40 @@
+.User {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 10px;
+    padding: 5px;
+    .userImg {
+        position: relative;
+        img {
+            height: 35px;
+            width: 35px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-right: 12px;
+        }
+        .statusbg{
+            width: 20px;
+            height: 20px;
+            background-color: white;
+            position:absolute;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            right: 10px;
+            top: -5px;
+            .status{
+                width: 14px;
+                height: 14px;
+                background-color: rgb(214, 214, 4);
+                border-radius: 50%;
+            }
+        }
+    }
+    .label{
+        font-size: 17px;
+        font-weight: 400
+    }
+}

@@ -1,0 +1,60 @@
+.Navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: crimson;
+    height: 60px;
+    padding: 10px 25px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 10;
+    .left{
+        flex: 3;
+        a{
+            text-decoration: none;
+            color: white;
+            font-size: 30px;
+            font-weight: 500;
+        }
+    }
+    .center{
+        flex: 5;
+        margin: auto 30px;
+    }
+    .right{
+        flex: 4;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-direction: row;
+        .links{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            a{
+                text-decoration: none;
+                color: white;
+                font-weight: 400;
+                margin: auto 10px;
+            }
+
+        }
+        .icons{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+        }
+        .userImg{
+            img{
+                height: 42px;
+                width: 42px;
+                border-radius: 50%;
+                // width: 100%;
+                object-fit:cover;
+                cursor: pointer;
+            }
+        }
+    }
+}

@@ -1,0 +1,16 @@
+.Search {
+    background-color: white;
+    position: relative;
+    padding: 5px;
+    border-radius: 20px;
+    width: 100%;
+    span {
+        position: absolute;
+    }
+    input {
+        outline: none;
+        border: none;
+        padding: 0 15px 0 30px;
+        width: 100%;
+    }
+}
