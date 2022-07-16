@@ -4,7 +4,6 @@ export const Login = () => {
   return (
     <div className="Login bg-light" >
         <div className="wrapper">
-
       <div className="left ">
         <h1 >Himawari</h1>
         <p >Connect with friends and the world around you on Himawari</p>

@@ -53,13 +53,12 @@ export const Profile = () => {
             <div className="part2info">
               <h5>User Friends</h5>
               <div className="friends">
-
-              {Users.map((elm) => (
-                  <div className="friend">
-                  <img src={elm.profilePicture} alt="" />
-                  <h6>{elm.username}</h6>
-                </div>
-              ))}
+                {Users.map((elm ,indx) => (
+                  <div className="friend" key={indx}>
+                    <img src={elm.profilePicture} alt="" />
+                    <h6>{elm.username}</h6>
+                  </div>
+                ))}
               </div>
             </div>
           </div>

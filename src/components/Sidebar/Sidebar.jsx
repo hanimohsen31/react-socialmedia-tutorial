@@ -28,6 +28,11 @@ export const Sidebar = () => {
       <button className="btn btn-light">Show&#160;More</button>
       <hr className="mx-4"/>
       {Users.map((elm) => <User img={elm.profilePicture} label={elm.username} key={elm.id} status={false} /> )}
+      <hr className="mx-4"/>
+      <span className="btn btn-light mx-1 my-3 facebook">Facebook</span>
+      <span className="btn btn-light mx-1 my-3 insta">Insta</span>
+      <span className="btn btn-light mx-1 my-3 behance">Behance</span>
+      <span className="btn btn-light mx-1 my-3 default">Default</span>
     </div>
   );
 };
