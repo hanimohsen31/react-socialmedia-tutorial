@@ -1,14 +1,22 @@
-import React, { useState } from "react";
+import React, { useContext, useState, useEffect } from "react";
 import { NavLink, Link } from "react-router-dom";
 import { Search } from "../Search/Search";
 import { BadgeIcon } from "../BadgeIcon/BadgeIcon";
+import { PalletContext } from "./../../store/PalletsContext";
 import PersonIcon from "@mui/icons-material/Person";
 import MessageIcon from "@mui/icons-material/Message";
 import NotificationsIcon from "@mui/icons-material/Notifications";
-import { Pallets } from "../../dummyData";
 import "./Navbar.scss";
+import { Pallets } from "../../dummyData";
+
 export const Navbar = () => {
-  const [pallet, setPallet] = useState(Pallets[0]);
+  const ctx = useContext(PalletContext);
+  const [pallet, setPallet] = useState(ctx.defaultPallet);
+  useEffect(() => {
+    setPallet(ctx.defaultPallet);
+  }, [ctx.defaultPallet]);
+  if (pallet === Pallets[3]){pallet.textColorWithBg = pallet.SecColor}
+
   return (
     <div className="Navbar" style={{ backgroundColor: pallet.mainColor }}>
       <div className="left">

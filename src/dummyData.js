@@ -141,16 +141,34 @@ export const Posts = [
 export const Pallets = [
   {
     mainColor: "crimson",
-    SecColor: "red",
+    SecColor: "ff0000",
     textColorNoBg: "#000",
     textColorWithBg: "#fff",
     bodyColor: "#fff",
+    badgeColor: "#ff0000",
   },
   {
-    mainColor: "blue",
-    SecColor: "lightblue",
+    mainColor: "#1877f2",
+    SecColor: "#1877f2",
     textColorNoBg: "#000",
     textColorWithBg: "#fff",
     bodyColor: "#fff",
+    badgeColor: "#eeeeee",
+  },
+  {
+    mainColor: "#405de6",
+    SecColor: "#405de6",
+    textColorNoBg: "#000",
+    textColorWithBg: "#fff",
+    bodyColor: "#fff",
+    badgeColor: "#eeeeee",
+  },
+  {
+    mainColor: "#191b1b",
+    SecColor: "#eeeeee",
+    textColorNoBg: "#eeeeee",
+    textColorWithBg: "#191b1b",
+    bodyColor: "#191b1b",
+    badgeColor: "#eeeeee",
   },
 ];

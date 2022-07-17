@@ -1,6 +1,13 @@
-import React from "react";
+import React, { useContext, useState, useEffect } from "react";
+import { PalletContext } from "./../../store/PalletsContext";
+
 import "./User.scss";
 export const User = (props) => {
+  const ctx = useContext(PalletContext);
+  const [pallet, setPallet] = useState(ctx.defaultPallet);
+  useEffect(() => {
+    setPallet(ctx.defaultPallet);
+  }, [ctx.defaultPallet]);
   return (
     <div className="User">
       <div className="userImg">
@@ -12,7 +19,7 @@ export const User = (props) => {
           </span>
         )}
       </div>
-      <div className="label">{props.label}</div>
+      <div className="label" style ={{color : pallet.textColorNoBg}}>{props.label}</div>
     </div>
   );
 };

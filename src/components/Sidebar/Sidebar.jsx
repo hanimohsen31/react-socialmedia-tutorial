@@ -1,5 +1,5 @@
-import React from "react";
-import {Users} from '../../dummyData'
+import React, { useContext } from "react";
+import { Users } from "../../dummyData";
 import RssFeedIcon from "@mui/icons-material/RssFeed";
 import CommentIcon from "@mui/icons-material/Comment";
 import PlayCircleFilledIcon from "@mui/icons-material/PlayCircleFilled";
@@ -9,11 +9,14 @@ import WorkOutlineIcon from "@mui/icons-material/WorkOutline";
 import HelpOutlineIcon from "@mui/icons-material/HelpOutline";
 import EventIcon from "@mui/icons-material/Event";
 import SchoolIcon from "@mui/icons-material/School";
-import "./Sidebar.scss";
-
+import { PalletContext } from "./../../store/PalletsContext";
 import { Tab } from "./Tab";
 import { User } from "../User/User";
+import "./Sidebar.scss";
+
 export const Sidebar = () => {
+  const ctx = useContext(PalletContext);
+
   return (
     <div className="Sidebar">
       <Tab icon={<RssFeedIcon />} label="Feed" />
@@ -26,13 +29,23 @@ export const Sidebar = () => {
       <Tab icon={<EventIcon />} label="Events" />
       <Tab icon={<SchoolIcon />} label="Courses" />
       <button className="btn btn-light">Show&#160;More</button>
-      <hr className="mx-4"/>
-      {Users.map((elm) => <User img={elm.profilePicture} label={elm.username} key={elm.id} status={false} /> )}
-      <hr className="mx-4"/>
-      <span className="btn btn-light mx-1 my-3 facebook">Facebook</span>
-      <span className="btn btn-light mx-1 my-3 insta">Insta</span>
-      <span className="btn btn-light mx-1 my-3 behance">Behance</span>
-      <span className="btn btn-light mx-1 my-3 default">Default</span>
+      <hr className="mx-4" />
+
+      {Users.map((elm) => (
+        <User
+          img={elm.profilePicture}
+          label={elm.username}
+          key={elm.id}
+          status={false}
+        />
+      ))}
+      <hr className="mx-4" />
+      <div className="themes">
+        <span className="mx-1 my-3 facebook" onClick={ctx.onFacebook}></span>
+        <span className="mx-1 my-3 insta" onClick={ctx.onInsta}></span>
+        <span className="mx-1 my-3 behance" onClick={ctx.onBehance}></span>
+        <span className="mx-1 my-3 default" onClick={ctx.onDefault}></span>
+      </div>
     </div>
   );
 };

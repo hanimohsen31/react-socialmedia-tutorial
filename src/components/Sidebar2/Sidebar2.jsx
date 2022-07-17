@@ -1,13 +1,20 @@
-import React from "react";
-import "./Sidebar2.scss";
+import React, { useContext, useState, useEffect } from "react";
+import { PalletContext } from "./../../store/PalletsContext";
 import { Users } from "../../dummyData";
 import { User } from "../User/User";
+import "./Sidebar2.scss";
 export const Sidebar2 = () => {
+  const ctx = useContext(PalletContext);
+  const [pallet, setPallet] = useState(ctx.defaultPallet);
+  useEffect(() => {
+    setPallet(ctx.defaultPallet);
+  }, [ctx.defaultPallet]);
+
   return (
     <div className="Sidebar2">
       <div className="part1">
         <img src="assets/imgs/gift.png" alt="" />
-        <div className="text">
+        <div className="text" style={{color: pallet.textColorNoBg}}>
           <span>Pola Foster</span> and <span>3 other friends</span> have
           birthday today
         </div>
@@ -16,7 +23,7 @@ export const Sidebar2 = () => {
         <img src="assets/imgs/ad.png" alt="" />
       </div>
       <div className="part3">
-        <span>Online Friends</span>
+        <span style={{color: pallet.textColorNoBg}} >Online Friends</span>
         {Users.map((elm) => (
           <User
             img={elm.profilePicture}
