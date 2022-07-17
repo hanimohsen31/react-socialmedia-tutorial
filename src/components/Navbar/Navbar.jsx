@@ -6,7 +6,7 @@ import { PalletContext } from "./../../store/PalletsContext";
 import PersonIcon from "@mui/icons-material/Person";
 import MessageIcon from "@mui/icons-material/Message";
 import NotificationsIcon from "@mui/icons-material/Notifications";
-import "./Navbar.scss";
+import styles from "./Navbar.module.scss";
 import { Pallets } from "../../dummyData";
 
 export const Navbar = () => {
@@ -15,22 +15,24 @@ export const Navbar = () => {
   useEffect(() => {
     setPallet(ctx.defaultPallet);
   }, [ctx.defaultPallet]);
-  if (pallet === Pallets[3]){pallet.textColorWithBg = pallet.SecColor}
+  if (pallet === Pallets[3]) {
+    pallet.textColorWithBg = pallet.SecColor;
+  }
 
   return (
-    <div className="Navbar" style={{ backgroundColor: pallet.mainColor }}>
-      <div className="left">
+    <div className={styles.Navbar} style={{ backgroundColor: pallet.mainColor }}>
+      <div className={styles.left}>
         <Link to="/" style={{ color: pallet.textColorWithBg }}>
           Himawari
         </Link>
       </div>
 
-      <div className="center">
+      <div className={styles.center}>
         <Search />
       </div>
 
-      <div className="right">
-        <div className="links">
+      <div className={styles.right}>
+        <div className={styles.links}>
           <NavLink style={{ color: pallet.textColorWithBg }} to="/">
             Home
           </NavLink>
@@ -44,7 +46,7 @@ export const Navbar = () => {
             Signup
           </NavLink>
         </div>
-        <div className="icons">
+        <div className={styles.icons}>
           <BadgeIcon
             style={{ color: pallet.textColorWithBg }}
             icon={<PersonIcon />}
@@ -61,9 +63,11 @@ export const Navbar = () => {
             badgeContent="8"
           />
         </div>
-        <div className="userImg">
-          <img src="assets/imgs/person/1.jpeg" alt="" />
-        </div>
+        <NavLink to="/profile">
+          <div className={styles.userImg}>
+            <img src="assets/imgs/person/1.jpeg" alt="" />
+          </div>
+        </NavLink>
       </div>
     </div>
   );

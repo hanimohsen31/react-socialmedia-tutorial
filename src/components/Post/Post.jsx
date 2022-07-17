@@ -1,20 +1,20 @@
 import React, { useContext, useState, useEffect } from "react";
 import { PalletContext } from "./../../store/PalletsContext";
-import "./Post.scss";
 import { Users } from "../../dummyData";
 import MoreVertIcon from "@mui/icons-material/MoreVert";
+import styles from "./Post.module.scss";
 
 export const Post = (props) => {
-  const ctx = useContext(PalletContext)
+  const ctx = useContext(PalletContext);
   const [pallet, setPallet] = useState(ctx.defaultPallet);
   useEffect(() => {
     setPallet(ctx.defaultPallet);
   }, [ctx.defaultPallet]);
   return (
-    <div className="Post" style ={{color : pallet.textColorNoBg}}>
-      <div className="top" >
-        <div className="left">
-          <div className="userImg" >
+    <div className={styles.Post} style={{ color: pallet.textColorNoBg }}>
+      <div className={styles.top}>
+        <div className={styles.left}>
+          <div className={styles.userImg}>
             <img
               src={
                 Users.filter((elm) => elm.id === props.userId)[0].profilePicture
@@ -22,28 +22,28 @@ export const Post = (props) => {
               alt=""
             />
           </div>
-          <div className="label">
+          <div className={styles.label}>
             {Users.filter((elm) => elm.id === props.userId)[0].username}
           </div>
-          <div className="time">{props.date}</div>
+          <div className={styles.time}>{props.date}</div>
         </div>
-        <div className="right">
+        <div className={styles.right}>
           <MoreVertIcon />
         </div>
       </div>
-      <div className="center">
+      <div className={styles.center}>
         <span>{props.desc}</span>
       </div>
-      <div className="buttom">
+      <div className={styles.buttom}>
         <img src={props.photo} alt="" />
       </div>
-      <div className="buttomLv2">
-        <div className="left">
+      <div className={styles.buttomLv2}>
+        <div className={styles.left}>
           <img src="assets/imgs/like.png" alt="" />
           <img src="assets/imgs/heart.png" alt="" />
-          <span>{props.like} People like it</span>
+          <span>{props.like} <span className={styles.text}>People like it</span></span>
         </div>
-        <div className="right">
+        <div className={styles.right}>
           <span>{props.comment} comments</span>
         </div>
       </div>

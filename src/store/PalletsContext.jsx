@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Pallets } from "../dummyData";
 
 export const PalletContext = React.createContext({
+  // this for vs code auto complete
   defaultPallet: Pallets[0],
   onDefault: () => {},
   onFacebook: () => {},
@@ -10,6 +11,7 @@ export const PalletContext = React.createContext({
 });
 
 export const PalletContextProvider = (props) => {
+  // the real work starts from here
   const [defaultPallet, setDefaultPallet] = useState(Pallets[0]);
 
   const onDefaultChange = () => {

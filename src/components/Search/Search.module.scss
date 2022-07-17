@@ -1,9 +1,14 @@
+@import "../../global.scss";
+
 .Search {
     background-color: white;
     position: relative;
     padding: 5px;
     border-radius: 20px;
     width: 100%;
+    @media (max-width: $tablet) {
+        display: none;
+    }
     span {
         position: absolute;
     }

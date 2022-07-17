@@ -12,17 +12,17 @@ export const Sidebar2 = () => {
 
   return (
     <div className="Sidebar2">
-      <div className="part1">
+      <div className="s2part1">
         <img src="assets/imgs/gift.png" alt="" />
         <div className="text" style={{color: pallet.textColorNoBg}}>
           <span>Pola Foster</span> and <span>3 other friends</span> have
           birthday today
         </div>
       </div>
-      <div className="part2">
+      <div className="s2part2">
         <img src="assets/imgs/ad.png" alt="" />
       </div>
-      <div className="part3">
+      <div className="s2part3">
         <span style={{color: pallet.textColorNoBg}} >Online Friends</span>
         {Users.map((elm) => (
           <User

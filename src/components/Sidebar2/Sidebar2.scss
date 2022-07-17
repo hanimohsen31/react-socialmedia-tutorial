@@ -1,8 +1,9 @@
+@import '../../global.scss';
 .Sidebar2 {
     height: calc(100vh - 60px);
     margin: 10px;
     padding: 5px;
-    .part1 {
+    .s2part1 {
         display: flex;
         justify-content: flex-start;
         align-items: center;
@@ -17,12 +18,12 @@
             }
         }
     }
-    .part2 {
+    .s2part2 {
         img {
             border-radius: 10px;
         }
     }
-    .part3 {
+    .s2part3 {
         margin-top: 30px;
         span {
             font-weight: 500;

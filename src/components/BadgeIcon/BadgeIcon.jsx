@@ -1,4 +1,4 @@
-import React , { useContext ,useState , useEffect}from "react";
+import React, { useContext, useState, useEffect } from "react";
 import Stack from "@mui/material/Stack";
 import Badge from "@mui/material/Badge";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
@@ -9,7 +9,6 @@ export function BadgeIcon(props) {
 
   const [pallet, setPallet] = useState(ctx.defaultPallet);
   useEffect(() => {
-    // console.log("use effect");
     setPallet(ctx.defaultPallet);
   }, [ctx.defaultPallet]);
 

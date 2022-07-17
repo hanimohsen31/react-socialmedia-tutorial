@@ -11,8 +11,8 @@ export const Tab = (props) => {
 
   return (
     <div className="Tab" style ={{color : pallet.textColorNoBg}}>
-      <div className="icon">{props.icon}</div>
-      <div className="label">{props.label}</div>
+      <div className="tabIcon">{props.icon}</div>
+      <div className="tabLabel">{props.label}</div>
     </div>
   );
 };

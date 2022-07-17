@@ -1,5 +1,8 @@
 import React, { useContext } from "react";
 import { Users } from "../../dummyData";
+import { PalletContext } from "./../../store/PalletsContext";
+import { Tab } from "./Tab";
+import { User } from "../User/User";
 import RssFeedIcon from "@mui/icons-material/RssFeed";
 import CommentIcon from "@mui/icons-material/Comment";
 import PlayCircleFilledIcon from "@mui/icons-material/PlayCircleFilled";
@@ -9,9 +12,6 @@ import WorkOutlineIcon from "@mui/icons-material/WorkOutline";
 import HelpOutlineIcon from "@mui/icons-material/HelpOutline";
 import EventIcon from "@mui/icons-material/Event";
 import SchoolIcon from "@mui/icons-material/School";
-import { PalletContext } from "./../../store/PalletsContext";
-import { Tab } from "./Tab";
-import { User } from "../User/User";
 import "./Sidebar.scss";
 
 export const Sidebar = () => {

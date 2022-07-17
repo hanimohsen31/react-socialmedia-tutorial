@@ -1,59 +1,76 @@
-.Navbar{
+@import "../../global.scss";
+
+.Navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    // background-color: crimson;
     height: 60px;
     padding: 10px 25px;
     position: fixed;
     width: 100%;
     top: 0;
     z-index: 10;
-    .left{
+    .left {
         flex: 3;
-        a{
+        a {
             text-decoration: none;
-            // color: white;
             font-size: 30px;
             font-weight: 500;
         }
     }
-    .center{
+    .center {
         flex: 5;
         margin: auto 30px;
+        @media (max-width: $tablet) {
+            flex: 0;
+            margin: 0;
+        }
     }
-    .right{
+    .right {
         flex: 4;
         display: flex;
         justify-content: space-between;
         align-items: center;
         flex-direction: row;
-        .links{
+        @media (max-width: $tablet) {
+            justify-content: flex-end;
+        }
+        .links {
             display: flex;
             justify-content: center;
             align-items: center;
-            a{
+            @media (max-width: $tablet) {
+                display: none;
+            }
+            a {
                 text-decoration: none;
-                // color: white;
                 font-weight: 400;
                 margin: auto 10px;
             }
-
         }
-        .icons{
+        .icons {
             display: flex;
             justify-content: center;
             align-items: center;
-            // color: white;
+            @media (max-width: $tablet) {
+                // transform: scale(.5);
+                display: none;
+                // margin: 0;
+            }
+            
         }
-        .userImg{
-            img{
+        .userImg {
+            img {
                 height: 42px;
                 width: 42px;
+                
                 border-radius: 50%;
-                // width: 100%;
-                object-fit:cover;
+                object-fit: cover;
                 cursor: pointer;
+                @media (max-width: $tablet) {
+                    height: 30px;
+                    width: 30px;
+                }
             }
         }
     }

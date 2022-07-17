@@ -1,3 +1,4 @@
+@import '../../global.scss';
 .Home{
     display: flex;
     justify-content: center;
@@ -6,12 +7,21 @@
     margin-top: 60px;
     .left{
         flex: 2;
+        @media (max-width : $tablet) {
+            display: none;
+        }
         
     }
     .center{
         flex: 5;
+        @media (max-width : $tablet) {
+            width: 100%;
+        }
     }
     .right{
         flex: 3;
+        @media (max-width : $tablet) {
+            display: none;
+        }
     }
 }
