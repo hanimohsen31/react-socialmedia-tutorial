@@ -3,8 +3,7 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ![screen1](readme/screen1.png "Logo Title")
-![screen1](readme/screen1.png "Logo Title")
-
+![screen2](readme/screen2.png "Logo Title")
 
 ## Available Scripts
 
